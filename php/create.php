@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../php/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     die("Invalid request method");
@@ -11,7 +11,7 @@ $price       = floatval($_POST['price'] ?? 0);
 $img         = '';
 
 if (!empty($_FILES['img_upload']['name']) && $_FILES['img_upload']['error'] === UPLOAD_ERR_OK) {
-    $targetDir = "uploads/";
+    $targetDir = "../uploads/";
 
     if (!is_dir($targetDir)) {
         mkdir($targetDir, 0755, true);
@@ -44,5 +44,5 @@ $stmt->execute();
 $stmt->close();
 $conn->close();
 
-header("Location: show_product.php");
+header("Location: ../pages/show_product.php");
 exit;

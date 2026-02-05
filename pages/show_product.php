@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include('../php/config.php');
 $result = mysqli_query($conn, "SELECT * FROM products ORDER BY id DESC");
 ?>
 <!DOCTYPE html>
@@ -8,14 +8,14 @@ $result = mysqli_query($conn, "SELECT * FROM products ORDER BY id DESC");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="productlist.css">
+    <link rel="stylesheet" href="../allcss/style.css">
+    <link rel="stylesheet" href="../allcss/productlist.css">
 </head>
 
 <body>
 
 <div class="container">
-    
+
     <!-- ปุ่ม Back สีเหลือง ขวาบน -->
     <div class="back-btn-wrapper">
         <a href="add_product.php" class="back-btn">Back</a>
@@ -29,12 +29,10 @@ $result = mysqli_query($conn, "SELECT * FROM products ORDER BY id DESC");
             while ($row = mysqli_fetch_assoc($result)) { 
         ?>
             <div class="card">
+
                 <?php if (!empty($row['img'])) { ?>
-                    <?php if (filter_var($row['img'], FILTER_VALIDATE_URL)) { ?>
-                        <img src="<?= htmlspecialchars($row['img']) ?>" alt="<?= htmlspecialchars($row['productname']) ?>">
-                    <?php } else { ?>
-                        <img src="uploads/<?= htmlspecialchars($row['img']) ?>" alt="<?= htmlspecialchars($row['productname']) ?>">
-                    <?php } ?>
+                    <img src="<?= htmlspecialchars($row['img']) ?>" 
+                         alt="<?= htmlspecialchars($row['productname']) ?>">
                 <?php } else { ?>
                     <div class="no-image">No Image</div>
                 <?php } ?>
@@ -42,6 +40,7 @@ $result = mysqli_query($conn, "SELECT * FROM products ORDER BY id DESC");
                 <h3><?= htmlspecialchars($row['productname']) ?></h3>
                 <p><?= nl2br(htmlspecialchars($row['detail'])) ?></p>
                 <span>฿<?= number_format($row['price'], 2) ?></span>
+
             </div>
         <?php 
             }

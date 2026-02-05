@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Product</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="addproduct.css">
+    <link rel="stylesheet" href="../allcss/style.css">
+    <link rel="stylesheet" href="../allcss/addproduct.css">
 </head>
 <body>
 
 <div class="container">
     <h1>Add New Product</h1>
 
-    <form method="POST" action="create.php" enctype="multipart/form-data">
+    <form method="POST" action="../php/create.php" enctype="multipart/form-data">
         <div class="form-group">
             <label>Product Name *</label>
             <input type="text" name="productname" class="form-control" required>
