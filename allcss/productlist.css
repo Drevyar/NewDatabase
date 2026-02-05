@@ -1,0 +1,90 @@
+/* ===== Product Grid ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px 24px;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.75);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    border: 1px solid rgba(96, 165, 250, 0.08);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(59, 130, 246, 0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    transition: transform 0.35s ease-out;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #e2e8f0;
+}
+
+.card:hover h3 {
+    color: #60a5fa;
+}
+
+.card p {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin: 0 0 12px;
+    line-height: 1.45;
+    min-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card span {
+    font-size: 1.32rem;
+    font-weight: 600;
+    color: #60a5fa;
+    display: block;
+}
+
+/* สำหรับกรณีไม่มีรูป / ไม่มีสินค้า */
+.no-image {
+    width: 100%;
+    height: 150px;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+}
+
+.no-products {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    padding: 40px 0;
+    grid-column: 1 / -1;
+}
+
