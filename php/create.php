@@ -36,7 +36,7 @@ if (empty($productname) || empty($detail) || $price <= 0) {
     die("Please fill in all required fields");
 }
 
-$stmt = $conn->prepare("INSERT INTO products (productname, detail, price, img) VALUES (?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO products (productname, detail, price, img) VALUES (?, ?, ?, ?)"); // แก้ตามชื่อ database ไม่ใช่
 $stmt->bind_param("ssds", $productname, $detail, $price, $img);
 
 $stmt->execute();
