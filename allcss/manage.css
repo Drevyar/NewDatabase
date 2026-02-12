@@ -1,14 +1,12 @@
 /* ===== MANAGE PRODUCT ONLY ===== */
 
-/* ทำให้กรอบกว้างขึ้นมาก พอดีกับปุ่มขนาดใหญ่ */
 .container {
     width: 100%;
-    max-width: 1400px;   /* ปรับได้ตามต้องการ */
+    max-width: 1400px;
     margin: 60px auto;
     padding: 40px;
     box-sizing: border-box;
 }
-
 
 /* Header bar */
 .manage-header {
@@ -43,7 +41,7 @@
     display: flex;
     gap: 14px;
     flex: 1;
-    max-width: 550px;           /* ให้ search กว้างขึ้นตาม */
+    max-width: 550px;
 }
 
 .search-box input {
@@ -91,18 +89,17 @@
     color: #6b21a8;
     font-weight: 600;
     font-size: 1.1rem;
-    vertical-align: middle;
 }
 
 .manage-table td {
-    padding: 24px 24px;
+    padding: 24px;
     border-top: 1px solid #f0e6ff;
     color: #4c1d95;
-    vertical-align: middle;
+    font-size: 1.05rem;
 }
 
 .manage-table tr {
-    height: 100px;
+    height: 120px;
 }
 
 .manage-table tr:hover {
@@ -111,21 +108,18 @@
 
 /* Image */
 .manage-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 14px;
+    width: 110px;
+    height: 110px;
+    border-radius: 16px;
     object-fit: cover;
     border: 1px solid #e9d5ff;
 }
 
-/* Actions column - กว้างขึ้นมาก เพื่อให้ปุ่มแนวนอนไม่ติดขอบ */
-.manage-table td:last-child {
+/* Actions */
+.action-wrap {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 16px;                   /* ช่องว่างระหว่างปุ่มกว้างขึ้นอีกนิด */
-    padding: 24px 32px;          /* padding ด้านข้างเพิ่ม เพื่อให้ปุ่มอยู่กลางและไม่ติดขอบ */
-    min-width: 260px;            /* กว้างพอให้ปุ่มขนาดนี้อยู่สบาย ไม่ซ้อนกัน */
+    gap: 16px;
 }
 
 /* Buttons */
@@ -141,10 +135,6 @@
     transition: all 0.25s ease;
     min-width: 90px;
     text-align: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1.4;
 }
 
 .btn-edit {
@@ -159,5 +149,15 @@
 .btn-delete:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    opacity: 0.95;
+}
+
+/* Title */
+.page-title {
+    text-align: center;
+    font-size: 2.9rem;
+    font-weight: 700;
+    margin: 0 0 50px 0;
+    background: linear-gradient(90deg, #7e22ce, #a855f7, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
