@@ -7,11 +7,11 @@
 }
 
 .card {
-    background: rgba(30, 41, 59, 0.75);
+    background: #faf5ff;            /* ขาว-ม่วงอ่อนมาก ฟิลคาเฟ่ */
     border-radius: 16px;
     padding: 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-    border: 1px solid rgba(96, 165, 250, 0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);   /* shadow นุ่ม ๆ */
+    border: 1px solid #e9d5ff;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     text-align: center;
     overflow: hidden;
@@ -19,7 +19,7 @@
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(59, 130, 246, 0.18);
+    box-shadow: 0 12px 28px rgba(168, 85, 247, 0.12);
 }
 
 .card img {
@@ -39,16 +39,16 @@
     margin: 0 0 8px;
     font-size: 1.2rem;
     font-weight: 500;
-    color: #e2e8f0;
+    color: #6b21a8;               /* ม่วงเข้มนิดสำหรับหัวข้อ */
 }
 
 .card:hover h3 {
-    color: #60a5fa;
+    color: #a855f7;
 }
 
 .card p {
     font-size: 0.875rem;
-    color: #94a3b8;
+    color: #7e22ce;               /* ม่วงเทา ๆ อ่านสบาย */
     margin: 0 0 12px;
     line-height: 1.45;
     min-height: 3em;
@@ -62,7 +62,7 @@
 .card span {
     font-size: 1.32rem;
     font-weight: 600;
-    color: #60a5fa;
+    color: #a855f7;
     display: block;
 }
 
@@ -70,21 +70,20 @@
 .no-image {
     width: 100%;
     height: 150px;
-    background: rgba(15, 23, 42, 0.6);
+    background: #f0e6ff;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64748b;
+    color: #c084fc80;
     font-size: 0.95rem;
     margin-bottom: 14px;
 }
 
 .no-products {
     text-align: center;
-    color: #94a3b8;
+    color: #7e22ce;
     font-size: 1.1rem;
     padding: 40px 0;
     grid-column: 1 / -1;
 }
-

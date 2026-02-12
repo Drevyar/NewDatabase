@@ -6,6 +6,8 @@
     <title>Add New Product</title>
     <link rel="stylesheet" href="../allcss/style.css">
     <link rel="stylesheet" href="../allcss/addproduct.css">
+    <link rel="stylesheet" href="../allcss/manage.css">
+
 </head>
 <body>
 

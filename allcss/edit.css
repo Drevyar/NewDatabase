@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #f7e9ff, #efe1ff);
+}
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #f6eaff;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+h1 {
+    text-align: center;
+    color: #7b2cff;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    color: #6b2bc5;
+    font-weight: 600;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.image-box {
+    margin-top: 20px;
+}
+
+.image-box img {
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,.2);
+}
+
+.btn-box {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-update {
+    background: #7b2cff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-back {
+    background: #999;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn-update:hover {
+    background: #5f18d6;
+}
+
+.btn-back:hover {
+    background: #666;
+}
