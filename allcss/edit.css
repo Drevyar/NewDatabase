@@ -1,21 +1,21 @@
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #f7e9ff, #efe1ff);
+    background: linear-gradient(135deg, #000000, #111111);
 }
 
 .container {
     max-width: 900px;
     margin: 60px auto;
-    background: #f6eaff;
+    background: #0d0d0d;
     padding: 50px;
     border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,.6);
 }
 
 h1 {
     text-align: center;
-    color: #7b2cff;
+    color: #ffffff;
     letter-spacing: 2px;
     margin-bottom: 40px;
 }
@@ -33,14 +33,16 @@ h1 {
 
 .form-group label {
     margin-bottom: 6px;
-    color: #6b2bc5;
+    color: #e0e0e0;
     font-weight: 600;
 }
 
 .form-group input {
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #444444;
+    background: #111111;
+    color: #f0f0f0;
 }
 
 .image-box {
@@ -50,7 +52,7 @@ h1 {
 .image-box img {
     width: 180px;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,.2);
+    box-shadow: 0 6px 15px rgba(0,0,0,.5);
 }
 
 .btn-box {
@@ -60,8 +62,8 @@ h1 {
 }
 
 .btn-update {
-    background: #7b2cff;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
     padding: 12px 25px;
     border: none;
     border-radius: 10px;
@@ -69,17 +71,17 @@ h1 {
 }
 
 .btn-back {
-    background: #999;
-    color: #fff;
+    background: #333333;
+    color: #ffffff;
     padding: 12px 25px;
     border-radius: 10px;
     text-decoration: none;
 }
 
 .btn-update:hover {
-    background: #5f18d6;
+    background: #e0e0e0;
 }
 
 .btn-back:hover {
-    background: #666;
+    background: #444444;
 }

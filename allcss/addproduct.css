@@ -7,7 +7,7 @@ label {
     display: block;
     font-weight: 500;
     margin-bottom: 8px;
-    color: #d8b4fe;          /* ม่วงอ่อนนวล */
+    color: #e0e0e0;          /* ขาวเทานวล luxury */
     font-size: 1rem;
 }
 
@@ -15,17 +15,17 @@ label {
     width: 100%;
     padding: 14px 16px;
     border-radius: 12px;
-    border: 1px solid #c084fc;     /* ม่วงขอบอ่อน */
+    border: 1px solid #444444;     /* เทาเข้ม luxury */
     font-size: 1rem;
-    background: #f3e8ff;            /* พื้นหลังขาว-ม่วงอ่อนมาก */
-    color: #4c1d95;                 /* ตัวอักษรม่วงเข้มนิด ๆ ให้ contrast พออ่าน */
+    background: #111111;            /* ดำเข้มพื้นหลัง input */
+    color: #f0f0f0;                 /* ขาวนวลสำหรับอ่านง่าย */
     transition: all .25s ease;
 }
 
 .form-control:focus {
-    border-color: #a855f7;          /* ม่วงกลางตอน focus */
-    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15);
-    background: #f0e6ff;            /* สว่างขึ้นนิดตอน focus */
+    border-color: #ffffff;          /* ขาวตอน focus */
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+    background: #1a1a1a;            /* ดำสว่างนิดตอน focus */
     outline: none;
 }
 
@@ -37,9 +37,9 @@ textarea.form-control {
 input[type="file"] {
     width: 100%;
     padding: 12px;
-    background: #f3e8ff;
-    color: #4c1d95;
-    border: 1px solid #c084fc;
+    background: #111111;
+    color: #f0f0f0;
+    border: 1px solid #444444;
     border-radius: 12px;
     cursor: pointer;
 }
@@ -52,9 +52,9 @@ input[type="file"] {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #c084fc, #d8b4fe);
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
     border: none;
-    color: #4c1d95;                /* ตัวอักษรเข้มให้เด่น */
+    color: #000000;                /* ดำ contrast สูง */
     padding: 14px 40px;
     border-radius: 12px;
     font-weight: 600;
@@ -65,5 +65,5 @@ input[type="file"] {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(192, 132, 252, 0.25);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.12);
 }

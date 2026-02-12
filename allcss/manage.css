@@ -1,11 +1,20 @@
 /* ===== MANAGE PRODUCT ONLY ===== */
 
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    color: #ffffff;
+}
+
+
 .container {
     width: 100%;
     max-width: 1400px;
     margin: 60px auto;
     padding: 40px;
     box-sizing: border-box;
+    background: #0d0d0d;
 }
 
 /* Header bar */
@@ -20,20 +29,20 @@
 
 /* Add button */
 .btn-add {
-    background: linear-gradient(135deg, #c084fc, #d8b4fe);
-    color: #4c1d95;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    color: #000000;
     padding: 14px 32px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.05rem;
-    box-shadow: 0 6px 18px rgba(168, 85, 247, 0.22);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
     transition: .3s ease;
 }
 
 .btn-add:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(168, 85, 247, 0.32);
+    box-shadow: 0 12px 28px rgba(255, 255, 255, 0.15);
 }
 
 /* Search box */
@@ -47,9 +56,9 @@
 .search-box input {
     padding: 14px 20px;
     border-radius: 12px;
-    border: 1px solid #c084fc80;
-    background: #f9f5ff;
-    color: #4c1d95;
+    border: 1px solid #444444;
+    background: #111111;
+    color: #f0f0f0;
     flex: 1;
     min-width: 320px;
     font-size: 1rem;
@@ -59,12 +68,12 @@
     padding: 14px 28px;
     border-radius: 12px;
     border: none;
-    background: linear-gradient(135deg, #c084fc, #d8b4fe);
-    color: #4c1d95;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    color: #000000;
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(168, 85, 247, 0.22);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
 }
 
 /* Table */
@@ -72,29 +81,29 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 30px;
-    background: #faf9ff;
+    background: #111111;
     border-radius: 18px;
     overflow: hidden;
     font-size: 1.05rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .manage-table thead {
-    background: #f5edff;
+    background: #1a1a1a;
 }
 
 .manage-table th {
     padding: 20px 24px;
     text-align: left;
-    color: #6b21a8;
+    color: #ffffff;
     font-weight: 600;
     font-size: 1.1rem;
 }
 
 .manage-table td {
     padding: 24px;
-    border-top: 1px solid #f0e6ff;
-    color: #4c1d95;
+    border-top: 1px solid #222222;
+    color: #e0e0e0;
     font-size: 1.05rem;
 }
 
@@ -103,7 +112,7 @@
 }
 
 .manage-table tr:hover {
-    background: #f5edff90;
+    background: #1a1a1a;
 }
 
 /* Image */
@@ -112,7 +121,7 @@
     height: 110px;
     border-radius: 16px;
     object-fit: cover;
-    border: 1px solid #e9d5ff;
+    border: 1px solid #444444;
 }
 
 /* Actions */
@@ -130,25 +139,26 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    color: #000000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     transition: all 0.25s ease;
     min-width: 90px;
     text-align: center;
 }
 
 .btn-edit {
-    background: linear-gradient(135deg, #a855f7, #c084fc);
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
 }
 
 .btn-delete {
-    background: linear-gradient(135deg, #f472b6, #fca5d1);
+    background: linear-gradient(135deg, #444444, #333333);
+    color: #ffffff;
 }
 
 .btn-edit:hover,
 .btn-delete:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
 /* Title */
@@ -157,7 +167,5 @@
     font-size: 2.9rem;
     font-weight: 700;
     margin: 0 0 50px 0;
-    background: linear-gradient(90deg, #7e22ce, #a855f7, #c084fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
 }

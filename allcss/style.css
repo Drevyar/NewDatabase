@@ -10,8 +10,8 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f3e8ff, #faf5ff, #f3e8ff);  /* ม่วงอ่อนไล่ระดับนุ่ม ๆ */
-    color: #4c1d95;
+    background: linear-gradient(135deg, #000000, #111111, #000000);
+    color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -20,12 +20,12 @@ body {
 
 /* Container */
 .container {
-    background: rgba(243, 232, 255, 0.92);   /* ขาว-ม่วงอ่อนโปร่งนิด */
+    background: rgba(17, 17, 17, 0.92);
     width: 100%;
     padding: 45px 35px;
     border-radius: 28px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-    border: 1px solid #e9d5ff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    border: 1px solid #222222;
     margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@ body:has(.grid) .container {
 /* หัวข้อ */
 h1 {
     margin-bottom: 48px;
-    color: #7e22ce;
+    color: #ffffff;
     font-size: 2.4rem;
     font-weight: 500;
     text-align: center;
@@ -74,16 +74,16 @@ h1 {
 .back-btn {
     display: inline-block;
     padding: 10px 24px;
-    background: linear-gradient(135deg, #d8b4fe, #c084fc);
-    color: #4c1d95;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    color: #000000;
     font-weight: 600;
     text-decoration: none;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(216, 180, 254, 0.25);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
 
 .back-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(216, 180, 254, 0.35);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
