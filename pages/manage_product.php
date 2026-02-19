@@ -1,6 +1,24 @@
 <?php
 include('../php/config.php');
-$result = mysqli_query($conn, "SELECT * FROM products ORDER BY ID DESC");
+
+$search = "";
+
+if (isset($_GET['search']) && $_GET['search'] != "") {
+
+    $search = mysqli_real_escape_string($conn, $_GET['search']);
+
+    $sql = "SELECT * FROM products 
+            WHERE ID LIKE '%$search%' 
+            OR productname LIKE '%$search%' 
+            ORDER BY ID DESC";
+
+} else {
+
+    $sql = "SELECT * FROM products ORDER BY ID DESC";
+
+}
+
+$result = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +37,8 @@ $result = mysqli_query($conn, "SELECT * FROM products ORDER BY ID DESC");
         <a href="add_product.php" class="btn-add">+ Add Product</a>
 
         <form method="GET" class="search-box">
-            <input type="text" name="search" placeholder="Search...">
+            <input type="text" name="search" placeholder="Search..."
+                   value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
             <button type="submit">Search</button>
         </form>
     </div>
