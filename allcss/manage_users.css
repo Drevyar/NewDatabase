@@ -1,0 +1,115 @@
+body {
+    background: linear-gradient(135deg, #e3ecf7, #d1e0f5); /* น้ำเงินอ่อนเข้มขึ้นนิด ดูนุ่มสบายตาแบบคาเฟ่ */
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+    width: 85%;
+    margin: 40px auto;
+    background: #eef4fc; /* น้ำเงินขาวอ่อนเข้มขึ้น ลดความจ้า ให้ดูสะอาดหรู */
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(30, 58, 95, 0.15); /* shadow น้ำเงินเข้มอ่อน ๆ */
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #1e3a5f; /* น้ำเงินเข้มหลัก เด่นชัดแต่ไม่แข็ง */
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.add-btn {
+    background: linear-gradient(135deg, #3b82f6, #1e40af); /* gradient น้ำเงินสด → เข้ม แบบคาเฟ่ cool */
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid #a3c4d9; /* น้ำเงินอ่อน border */
+    width: 250px;
+    background: #f8fbff; /* พื้นหลัง input สว่างนิด ไม่ขาวจ้า */
+    color: #1e3a5f;
+}
+
+.search-form button {
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 12px;
+    color: white;
+}
+
+.table-card {
+    background: #eef4fc; /* เข้มขึ้นนิด ให้ตารางไม่จ้าเกิน */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #d1e0f5; /* น้ำเงินอ่อนสำหรับ header */
+    padding: 15px;
+    text-align: left;
+    color: #1e3a5f;
+}
+
+td {
+    padding: 18px 15px;
+    border-bottom: 1px solid #c0d4ed; /* น้ำเงินอ่อนเส้นขอบ */
+}
+
+tr:hover {
+    background: #e3ecf7; /* น้ำเงินอ่อน hover */
+}
+
+.edit-btn {
+    background: #3b82f6; /* น้ำเงินกลางสด */
+    padding: 6px 14px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background: #d1e0f5; /* น้ำเงินอ่อน */
+    padding: 6px 14px;
+    border-radius: 10px;
+    color: #1e3a5f;
+    text-decoration: none;
+}
+
+.role-badge.admin {
+    background: #ff6b6b; /* แดงอ่อนสดใส ให้เด่นแต่ไม่ขัดธีม */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.role-badge.user {
+    background: #4caf50; /* เขียวอ่อนสดใส (แทน seagreen) ให้ดู fresh ขึ้น */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+}

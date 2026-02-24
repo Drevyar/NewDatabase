@@ -1,17 +1,24 @@
+<?php include('../auth/check.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Product</title>
+
     <link rel="stylesheet" href="../allcss/style.css">
     <link rel="stylesheet" href="../allcss/addproduct.css">
     <link rel="stylesheet" href="../allcss/manage.css">
-
+    <link rel="stylesheet" href="../allcss/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
 <div class="container">
+
+    <?php include('navbar.php'); ?>
+
     <h1>Add New Product</h1>
 
     <form method="POST" action="../php/create.php" enctype="multipart/form-data">
@@ -44,6 +51,7 @@
             <button type="submit" class="btn-primary">Create Product</button>
         </div>
     </form>
+
 </div>
 
 </body>

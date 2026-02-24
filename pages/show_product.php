@@ -1,20 +1,11 @@
 <?php
 session_start();
+include('../auth/check_user.php');
 include('../php/config.php');
 
-// ใช้ ID ตัวใหญ่ให้ตรงกับ DB
 $result = mysqli_query($conn, "SELECT * FROM products ORDER BY ID DESC");
-
-// นับจำนวนสินค้าใน cart แบบปลอดภัย
-$count = 0;
-if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
-    foreach($_SESSION['cart'] as $qty){
-        if(is_numeric($qty)){
-            $count += $qty;
-        }
-    }
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,19 +22,10 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
 <body>
 <div class="container">
 
-<!-- ===== HEADER BAR ===== -->
-<div class="top-bar">
-    <h1>Product List</h1>
+<?php include('navbar.php'); ?>
 
-    <a href="cart.php" class="cart-btn">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <?php if($count > 0): ?>
-            <span class="cart-badge"><?= $count ?></span>
-        <?php endif; ?>
-    </a>
-</div>
+<h1>Product List</h1>
 
-<!-- ===== PRODUCT GRID ===== -->
 <div class="grid">
 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
     <div class="card">
@@ -63,7 +45,6 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
         <p><?= nl2br(htmlspecialchars($row['detail'])) ?></p>
         <span class="price">฿<?= number_format($row['price'],2) ?></span>
 
-        <!-- ปุ่มเพิ่มตะกร้า -->
         <div class="card-footer">
             <a href="../php/add_to_cart.php?id=<?= $row['ID'] ?>" class="cart-btn">
                 <i class="fa-solid fa-cart-plus"></i>

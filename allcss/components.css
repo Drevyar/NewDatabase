@@ -1,58 +1,180 @@
-/* ===== TOP BAR ===== */
-.top-bar {
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= BODY (ทุกหน้า ยกเว้น welcome) ================= */
+
+body:not(.welcome-body) {
+    margin-left: 90px;
+    background: #e3ecf7;           /* ลดความสว่างจาก #f0f5fa → น้ำเงินอ่อนเข้มขึ้นนิด ดูมีมิติ ไม่ขาวจ้า */
+    color: #1e3a5f;                /* น้ำเงินเข้ม ยังคงชัดเจน */
+    overflow-x: hidden;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 90px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1e3a5f, #2c4a6e);  /* ยังคงเดิม เข้มดีอยู่แล้ว */
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
+    padding-top: 60px;
+    gap: 50px;
+    border-right: 3px solid #81a3c9;         /* น้ำเงินอ่อน border เด่นชัด */
+    box-shadow: 3px 0 20px rgba(30,58,95,0.28); /* shadow เข้มขึ้นนิด ให้ sidebar โผล่ชัด */
+    z-index: 1000;
 }
 
-/* ===== CART BUTTON ===== */
+.nav-icon,
 .cart-btn {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background: #111;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 18px;
+    font-size: 26px;
+    color: #e3f0ff;                /* น้ำเงินขาวอ่อน เด่นดีบนพื้นหลังเข้ม */
     text-decoration: none;
-    transition: all 0.3s ease;
-    border: 1px solid #333;
+    transition: all 0.4s ease;
+    position: relative;
 }
 
+.nav-icon:hover,
 .cart-btn:hover {
-    background: #ff9800;
-    color: #000;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255,152,0,0.6);
+    color: #b3d4ff;                /* น้ำเงินอ่อนสดใสขึ้นนิดเมื่อ hover ให้เด่นและสดชื่นกว่าเดิม */
+    transform: scale(1.25) rotate(12deg);
 }
 
-/* badge จำนวนสินค้า */
+/* Cart Badge - ปรับให้เด่นขึ้นมาก */
 .cart-badge {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    background: red;
-    color: white;
-    font-size: 12px;
-    padding: 3px 6px;
+    top: -10px;                    /* ขยับขึ้นนิดให้ไม่ติดขอบ */
+    right: -14px;                  /* ขยับขวานิดให้สมดุล */
+    background: #81a3c9;           /* น้ำเงินอ่อนสว่างขึ้น ให้ badge โผล่ชัดเจนมาก */
+    color: #0f2542;                /* น้ำเงินเข้มจัดจ้าน เพื่อให้ตัวเลขขาว-ดำตัดกันแรง (เห็นชัดแม้ตัวเลขเยอะ) */
+    font-size: 0.8rem;             /* ขยายตัวอักษรเล็กน้อยให้อ่านง่าย */
+    min-width: 22px;               /* กว้างขั้นต่ำเพื่อรองรับเลข 2 หลัก+ */
+    height: 22px;
+    line-height: 22px;
+    padding: 0 6px;
     border-radius: 50%;
-    font-weight: bold;
+    font-weight: 800;              /* ตัวหนาขึ้นให้เด่น */
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(30, 58, 95, 0.45); /* shadow เข้มขึ้น + ขยาย ให้ badge ลอยเด่น */
+    border: 1.5px solid #ffffff33; /* ขอบขาวจาง ๆ นิด ให้ดูพรีเมียมขึ้น */
 }
 
-/* ===== CARD FOOTER ===== */
-.card-footer {
-    margin-top: 15px;
+/* ================= WELCOME PAGE ONLY ================= */
+
+.welcome-body {
+    margin-left: 0;
+    background: linear-gradient(135deg, #e3ecf7, #d1e0f5);  /* ลดความสว่างจาก #f0f5fa → ดูนุ่ม ไม่ขาวจ้า */
+    overflow: hidden;
+}
+
+.welcome-container {
+    height: 100vh;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
 }
 
-.price {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 16px;
+.welcome-title {
+    font-size: 5.5rem;
+    color: #2c4a6e;                /* ยังคงเข้ม เด่นชัด */
+    letter-spacing: 8px;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 10px rgba(44,74,110,0.25); /* shadow เข้มขึ้นนิด ให้ title เด่น */
 }
+
+.welcome-sub {
+    font-size: 1.35rem;
+    color: #3a5f8c;                /* น้ำเงินกลางเข้มขึ้นนิด ให้อ่านง่ายขึ้น */
+    margin-bottom: 50px;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.shop-btn {
+    padding: 16px 50px;
+    background: linear-gradient(135deg, #4a90e2, #2c4a6e);  /* ยังคงเดิม เด่นดี */
+    color: #f0f5fa;                /* ขาวน้ำเงินอ่อน ตัดกับพื้นหลังใหม่ได้ดี */
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 12px 30px rgba(74,144,226,0.30); /* shadow เข้มขึ้นนิด */
+}
+
+.shop-btn:hover {
+    background: linear-gradient(135deg, #2c4a6e, #1e3a5f);
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 20px 40px rgba(44,74,110,0.40);
+}
+
+/* ================= Floating Images ================= */
+
+.floating {
+    position: absolute;
+    width: 120px;
+    max-width: 28vw;
+    animation: float-rotate 14s ease-in-out infinite;
+    opacity: 0.92;
+    pointer-events: none;
+}
+
+.cat1   { top: 12%; left: 10%; animation-delay: 0s; width: 140px; }
+.cat2   { bottom: 18%; right: 12%; animation-delay: 4s; width: 150px; }
+.food1  { top: 22%; right: 14%; animation-delay: 2.5s; width: 110px; }
+.can1   { bottom: 15%; left: 16%; animation-delay: 6s; width: 105px; }
+
+@keyframes float-rotate {
+    0%   { transform: translateY(0) rotate(0deg); }
+    25%  { transform: translateY(-35px) rotate(7deg); }
+    50%  { transform: translateY(0) rotate(0deg); }
+    75%  { transform: translateY(-28px) rotate(-7deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    body:not(.welcome-body) {
+        margin-left: 70px;
+    }
+
+    .sidebar {
+        width: 70px;
+        gap: 35px;
+        padding-top: 40px;
+    }
+
+    .nav-icon,
+    .cart-btn {
+        font-size: 22px;
+    }
+
+    .welcome-title {
+        font-size: 3.8rem;
+        letter-spacing: 5px;
+    }
+
+    .welcome-sub {
+        font-size: 1.1rem;
+    }
+
+    .floating {
+        width: 90px;
+    }
+}
+

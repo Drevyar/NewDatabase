@@ -1,4 +1,5 @@
-/* ===== Form Styles ===== */
+/* ===== Form Styles - Cafe Theme (Blue Tone - Less Bright) ===== */
+
 .form-group {
     margin-bottom: 28px;
 }
@@ -7,25 +8,27 @@ label {
     display: block;
     font-weight: 500;
     margin-bottom: 8px;
-    color: #e0e0e0;          /* ขาวเทานวล luxury */
+    color: #2c4a6e; /* ยังคงน้ำเงินเข้มเข้มข้น เด่นชัด */
     font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
+/* ===== Input / Textarea ===== */
 .form-control {
     width: 100%;
     padding: 14px 16px;
-    border-radius: 12px;
-    border: 1px solid #444444;     /* เทาเข้ม luxury */
+    border-radius: 14px;
+    border: 1px solid #8cb0d3; /* น้ำเงินอ่อนเข้มขึ้นนิด ให้ขอบชัดขึ้น */
     font-size: 1rem;
-    background: #111111;            /* ดำเข้มพื้นหลัง input */
-    color: #f0f0f0;                 /* ขาวนวลสำหรับอ่านง่าย */
+    background: #e8f0fa; /* ลดความสว่างจาก #f0f7fc → ดูนุ่ม ไม่ขาวจ้า แต่ยังสบายตา */
+    color: #1e3a5f; /* น้ำเงินเข้มสำหรับข้อความ ยังคงชัดเจน */
     transition: all .25s ease;
 }
 
 .form-control:focus {
-    border-color: #ffffff;          /* ขาวตอน focus */
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
-    background: #1a1a1a;            /* ดำสว่างนิดตอน focus */
+    border-color: #3b82f6; /* น้ำเงินกลางสดใสขึ้นนิด ให้เด่นตอน focus */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.18); /* glow น้ำเงินอ่อนเข้มขึ้น */
+    background: #f8fbff; /* พื้นหลังตอน focus สว่างขึ้นเล็กน้อยแต่ไม่ขาวจ้า */
     outline: none;
 }
 
@@ -34,36 +37,44 @@ textarea.form-control {
     resize: vertical;
 }
 
+/* ===== File Input ===== */
 input[type="file"] {
     width: 100%;
     padding: 12px;
-    background: #111111;
-    color: #f0f0f0;
-    border: 1px solid #444444;
-    border-radius: 12px;
+    background: #e8f0fa; /* เหมือน input หลัก ลดความขาว */
+    color: #1e3a5f;
+    border: 1px solid #8cb0d3;
+    border-radius: 14px;
     cursor: pointer;
+    transition: 0.25s ease;
 }
 
-/* ปุ่ม */
+input[type="file"]:hover {
+    border-color: #3b82f6;
+}
+
+/* ===== Form Actions ===== */
 .form-actions {
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
 
+/* ===== Primary Button ===== */
 .btn-primary {
-    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    background: linear-gradient(135deg, #3b82f6, #1e40af); /* gradient น้ำเงินสด → เข้มขึ้น ให้เด่นแต่ไม่ฉูดฉาด */
     border: none;
-    color: #000000;                /* ดำ contrast สูง */
+    color: #ffffff;
     padding: 14px 40px;
-    border-radius: 12px;
+    border-radius: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all .3s ease;
     min-width: 220px;
+    letter-spacing: 0.5px;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 24px rgba(59, 130, 246, 0.40); /* shadow เข้มขึ้น ให้ปุ่มเด่นชัด */
 }

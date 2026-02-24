@@ -1,63 +1,83 @@
 <?php
 session_start();
-include('../php/config.php');
+include('../auth/check_user.php');
+include('../php/config.php'); 
 $total = 0;
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Your Cart</title>
-<link rel="stylesheet" href="../allcss/style.css">
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="../allcss/style.css">
+    <link rel="stylesheet" href="../allcss/components.css">
+    <link rel="stylesheet" href="../allcss/cart.css"> <!-- ถ้ามีไฟล์นี้อยู่แล้ว เก็บไว้ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <div class="container">
-<h2>Your Cart</h2>
+    <?php include('navbar.php'); ?>
 
-<?php
-if(isset($_SESSION['cart']) && count($_SESSION['cart']) > 0){
+    <h2 class="cart-title">Your Cart</h2>
 
-    foreach($_SESSION['cart'] as $id => $qty){
+    <?php if(isset($_SESSION['cart']) && count($_SESSION['cart']) > 0): ?>
+        <div class="cart-wrapper">
+            <?php foreach($_SESSION['cart'] as $id => $qty): 
+                $id = (int)$id;
+                $qty = (int)$qty;
 
-        $id = (int)$id; // กัน error
-        $qty = (int)$qty;
+                $sql = "SELECT * FROM products WHERE ID = $id";
+                $result = mysqli_query($conn, $sql);
+                if(!$result) die(mysqli_error($conn));
 
-        $sql = "SELECT * FROM products WHERE ID = $id";
-        $result = mysqli_query($conn,$sql);
+                $row = mysqli_fetch_assoc($result);
+                if(!$row) continue;
 
-        if(!$result){
-            die(mysqli_error($conn));
-        }
+                $subtotal = $row['price'] * $qty;
+                $total += $subtotal;
+            ?>
+                <div class="cart-item">
+                    <div class="cart-img-wrapper">
+                        <?php 
+                        // เปลี่ยนจาก 'image' เป็น 'img' ตามฐานข้อมูลจริงของคุณ
+                        $img_url = $row['img'] ?? '';
+                        if(!empty($img_url) && filter_var($img_url, FILTER_VALIDATE_URL)): ?>
+                            <img src="<?= htmlspecialchars($img_url) ?>" alt="<?= htmlspecialchars($row['productname']) ?>" class="cart-img" onerror="this.src='https://via.placeholder.com/90?text=Image+Error';">
+                        <?php else: ?>
+                            <div class="no-image-cart">No Image</div>
+                        <?php endif; ?>
+                    </div>
 
-        $row = mysqli_fetch_assoc($result);
+                    <div class="cart-details">
+                        <h3><?= htmlspecialchars($row['productname']) ?></h3>
+                        <p class="quantity">Quantity: <?= $qty ?></p>
+                        <p class="price-item">฿<?= number_format($row['price'], 2) ?></p>
+                    </div>
 
-        if(!$row){
-            continue; // ถ้า ID ไม่มีใน DB ข้าม
-        }
+                    <div class="cart-subtotal">
+                        ฿<?= number_format($subtotal, 2) ?>
+                    </div>
 
-        $subtotal = $row['price'] * $qty;
-        $total += $subtotal;
-?>
-        <p>
-            <?= htmlspecialchars($row['productname']) ?>
-            - <?= $qty ?> ชิ้น
-            - ฿<?= number_format($subtotal,2) ?>
-            <a href="../php/remove_cart.php?id=<?= $id ?>">ลบ</a>
-        </p>
-<?php
-    }
+                    <a class="remove-btn" href="../php/remove_cart.php?id=<?= $id ?>" title="Remove item">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                </div>
+            <?php endforeach; ?>
 
-    echo "<h3>Total: ฿".number_format($total,2)."</h3>";
+            <div class="cart-total">
+                <span>Total:</span>
+                <strong>฿<?= number_format($total, 2) ?></strong>
+            </div>
 
-}else{
-    echo "<p>ไม่มีสินค้าในตะกร้า</p>";
-}
-?>
-
-<br>
-<a href="show_product.php">← กลับไปหน้าสินค้า</a>
-
+            <div class="cart-actions">
+                <a href="checkout.php" class="btn-checkout">Proceed to Checkout</a>
+            </div>
+        </div>
+    <?php else: ?>
+        <p class="empty-cart">Your cart is empty 🐱</p>
+    <?php endif; ?>
 </div>
+
 </body>
 </html>

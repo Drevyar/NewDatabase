@@ -1,25 +1,28 @@
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #000000, #111111);
+    background: linear-gradient(135deg, #e3ecf7, #d1e0f5); /* ลดความสว่างลงจาก #f0f5fa/#d8e5f5 → น้ำเงินอ่อนเข้มขึ้นนิด ดูมีมิติ ไม่ขาวจ้า */
 }
 
+/* ===== Container ===== */
 .container {
     max-width: 900px;
     margin: 60px auto;
-    background: #0d0d0d;
+    background: #eef4fc; /* จาก #f8fbff → น้ำเงินขาวอ่อนเข้มขึ้นเล็กน้อย ดูสะอาดแต่ไม่จ้าเกิน */
     padding: 50px;
     border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.6);
+    box-shadow: 0 15px 35px rgba(30, 58, 95, 0.15); /* shadow เข้มขึ้นนิด ให้ container โผล่ชัด */
 }
 
+/* ===== Title ===== */
 h1 {
     text-align: center;
-    color: #ffffff;
-    letter-spacing: 2px;
+    color: #1e3a5f; /* น้ำเงินเข้มขึ้นนิดจาก #2c4a6e → เด่นชัดกว่าเดิมบนพื้นหลังใหม่ */
+    letter-spacing: 1px;
     margin-bottom: 40px;
 }
 
+/* ===== Grid ===== */
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -33,55 +36,72 @@ h1 {
 
 .form-group label {
     margin-bottom: 6px;
-    color: #e0e0e0;
+    color: #2c4a6e; /* เข้มขึ้นนิด ให้ label เด่นชัดมากขึ้น */
     font-weight: 600;
 }
 
+/* ===== Inputs ===== */
 .form-group input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #444444;
-    background: #111111;
-    color: #f0f0f0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #8cb0d3; /* จาก #a3c4d9 → น้ำเงินอ่อนเข้มขึ้น ให้ขอบชัดเจน ไม่จาง */
+    background: #e8f0fa; /* จาก #f0f7fc → เข้มขึ้นเล็กน้อย ลดความขาว แต่ยังอ่านสบาย */
+    color: #1e3a5f; /* ยังคงชัดเจน */
+    transition: 0.25s ease;
 }
 
+.form-group input:focus {
+    border-color: #3b82f6; /* น้ำเงินสดขึ้นนิด ให้ focus เด่นชัด */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.20); /* glow เข้มขึ้น ให้เห็นชัด */
+    outline: none;
+    background: #f5faff; /* พื้นหลัง focus สว่างขึ้นเล็กน้อยแต่ไม่ขาวจ้า */
+}
+
+/* ===== Image Box ===== */
 .image-box {
     margin-top: 20px;
 }
 
 .image-box img {
     width: 180px;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,.5);
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.22); /* shadow เข้มขึ้นนิด ให้รูปเด่น */
 }
 
+/* ===== Buttons ===== */
 .btn-box {
     margin-top: 35px;
     display: flex;
     gap: 15px;
 }
 
+/* Update Button */
 .btn-update {
-    background: #ffffff;
-    color: #000000;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.btn-back {
-    background: #333333;
+    background: linear-gradient(135deg, #3b82f6, #1e40af); /* gradient สดใสขึ้นนิด ให้ปุ่มเด่นมากขึ้น */
     color: #ffffff;
     padding: 12px 25px;
-    border-radius: 10px;
-    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
 .btn-update:hover {
-    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.40); /* shadow เข้มขึ้น ให้ปุ่มโผล่ชัด */
+}
+
+/* Back Button */
+.btn-back {
+    background: #d1e0f5; /* จาก #d8e5f5 → เข้มขึ้นนิด ให้ตัดกับพื้นหลังดีขึ้น */
+    color: #1e3a5f; /* น้ำเงินเข้มขึ้นนิด ให้ข้อความเด่น */
+    padding: 12px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .btn-back:hover {
-    background: #444444;
+    background: #b8cfee; /* เข้มขึ้นนิดเมื่อ hover ให้เห็นชัด */
 }
