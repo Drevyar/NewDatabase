@@ -11,7 +11,7 @@ $total = 0;
     <title>Your Cart</title>
     <link rel="stylesheet" href="../allcss/style.css">
     <link rel="stylesheet" href="../allcss/components.css">
-    <link rel="stylesheet" href="../allcss/cart.css"> <!-- ถ้ามีไฟล์นี้อยู่แล้ว เก็บไว้ -->
+    <link rel="stylesheet" href="../allcss/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -40,7 +40,6 @@ $total = 0;
                 <div class="cart-item">
                     <div class="cart-img-wrapper">
                         <?php 
-                        // เปลี่ยนจาก 'image' เป็น 'img' ตามฐานข้อมูลจริงของคุณ
                         $img_url = $row['img'] ?? '';
                         if(!empty($img_url) && filter_var($img_url, FILTER_VALIDATE_URL)): ?>
                             <img src="<?= htmlspecialchars($img_url) ?>" alt="<?= htmlspecialchars($row['productname']) ?>" class="cart-img" onerror="this.src='https://via.placeholder.com/90?text=Image+Error';">

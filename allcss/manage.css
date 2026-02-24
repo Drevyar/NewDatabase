@@ -3,8 +3,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e3ecf7, #d1e0f5); /* ลดความสว่างลงจาก #f0f5fa/#d8e5f5 → น้ำเงินอ่อนเข้มขึ้นนิด ดูมีมิติ ไม่ขาวจ้า */
-    color: #1e3a5f; /* น้ำเงินเข้มขึ้นนิด ให้ข้อความหลักเด่นชัดกว่าเดิม */
+    background: linear-gradient(135deg, #e3ecf7, #d1e0f5);
+    color: #1e3a5f;
     font-family: "Segoe UI", sans-serif;
 }
 
@@ -15,9 +15,9 @@ html, body {
     margin: 60px auto;
     padding: 40px;
     box-sizing: border-box;
-    background: #eef4fc; /* จาก #f8fbff → น้ำเงินขาวอ่อนเข้มขึ้นเล็กน้อย ดูสะอาดแต่ไม่จ้าเกิน */
+    background: #eef4fc;
     border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(30, 58, 95, 0.18); /* shadow เข้มขึ้นนิด ให้ container โผล่ชัด */
+    box-shadow: 0 15px 35px rgba(30, 58, 95, 0.18);
 }
 
 /* ===== Title ===== */
@@ -26,7 +26,7 @@ html, body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 50px;
-    color: #1e3a5f; /* เข้มขึ้นนิด ให้ title เด่นชัดบนพื้นหลังใหม่ */
+    color: #1e3a5f;
 }
 
 /* ===== Header bar ===== */
@@ -41,7 +41,7 @@ html, body {
 
 /* ===== Add button ===== */
 .btn-add {
-    background: linear-gradient(135deg, #3b82f6, #1e40af); /* gradient สดใสขึ้นนิด ให้ปุ่มเด่นมากขึ้น */
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
     color: #ffffff;
     padding: 14px 32px;
     border-radius: 14px;
@@ -53,7 +53,7 @@ html, body {
 
 .btn-add:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.40); /* shadow เข้มขึ้น ให้ปุ่มโผล่ชัด */
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.40);
 }
 
 /* ===== Search box ===== */
@@ -67,8 +67,8 @@ html, body {
 .search-box input {
     padding: 14px 20px;
     border-radius: 14px;
-    border: 1px solid #8cb0d3; /* จาก #a3c4d9 → เข้มขึ้นนิด ให้ขอบชัดเจน ไม่จาง */
-    background: #e8f0fa; /* จาก #f0f7fc → เข้มขึ้นเล็กน้อย ลดความขาว แต่ยังอ่านสบาย */
+    border: 1px solid #8cb0d3;
+    background: #e8f0fa;
     color: #1e3a5f;
     flex: 1;
     min-width: 280px;
@@ -77,7 +77,7 @@ html, body {
 }
 
 .search-box input:focus {
-    border-color: #3b82f6; /* น้ำเงินสดขึ้นนิด ให้ focus เด่นชัด */
+    border-color: #3b82f6;
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.20);
     outline: none;
 }
@@ -103,7 +103,7 @@ html, body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 30px;
-    background: #eef4fc; /* จาก #f8fbff → เข้มขึ้นนิด ให้ตารางไม่จ้าเกิน */
+    background: #eef4fc;
     border-radius: 18px;
     overflow: hidden;
     font-size: 1rem;
@@ -111,24 +111,24 @@ html, body {
 }
 
 .manage-table thead {
-    background: #d1e0f5; /* จาก #d8e5f5 → เข้มขึ้นนิด ให้ header เด่นชัด */
+    background: #d1e0f5;
 }
 
 .manage-table th {
     padding: 20px 24px;
     text-align: left;
-    color: #1e3a5f; /* เข้มขึ้นนิด ให้หัวตารางชัด */
+    color: #1e3a5f;
     font-weight: 600;
 }
 
 .manage-table td {
     padding: 20px 24px;
-    border-top: 1px solid #b8cfee; /* จาก #c0d4ed → เข้มขึ้นนิด ให้เส้นขอบชัดเจน */
+    border-top: 1px solid #b8cfee;
     color: #1e3a5f;
 }
 
 .manage-table tr:hover {
-    background: #d9e6f9; /* จาก #e8f0fa → เข้มขึ้นนิด ให้ hover เด่นแต่ไม่ฉูดฉาด */
+    background: #d9e6f9;
 }
 
 /* ===== Image ===== */
@@ -137,7 +137,7 @@ html, body {
     height: 100px;
     border-radius: 14px;
     object-fit: cover;
-    border: 1px solid #8cb0d3; /* เข้มขึ้นนิด ให้รูปมีขอบชัด */
+    border: 1px solid #8cb0d3;
 }
 
 /* ===== Actions ===== */
@@ -173,10 +173,10 @@ html, body {
 
 /* Delete */
 .btn-delete {
-    background: #d1e0f5; /* จาก #d8e5f5 → เข้มขึ้นนิด ให้ตัดกับพื้นหลังดีขึ้น */
+    background: #d1e0f5;
     color: #1e3a5f;
 }
 
 .btn-delete:hover {
-    background: #b8cfee; /* เข้มขึ้นนิดเมื่อ hover ให้เห็นชัด */
+    background: #b8cfee;
 }

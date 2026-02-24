@@ -12,7 +12,6 @@
 
 <div class="welcome-container">
 
-    <!-- Floating elements - ขนาดเล็กลง + ตำแหน่งกระจายดีขึ้น -->
     <img src="https://inwfile.com/s-dl/lpuyjr.png" class="floating cat1" alt="Floating cute cat">
     <img src="https://www.maomaocare.com/wp-content/uploads/2024/03/MaoMao1.png" class="floating food1" alt="Floating cat food">
     <img src="https://tailybuddy.com/products/620/whiskas-3d-1-2kg-fop-adult-oceanfish-2_1713962774553_1720685088121_(1).png" class="floating cat2" alt="Floating cute cat">

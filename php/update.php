@@ -5,7 +5,7 @@ $id     = $_POST['id'];
 $name   = $_POST['productname'];
 $detail = $_POST['detail'];
 $price  = $_POST['price'];
-$img    = $_POST['img'];   // รับ URL
+$img    = $_POST['img'];
 
 $sql = "UPDATE products 
         SET productname='$name',

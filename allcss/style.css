@@ -10,8 +10,8 @@
 /* ================= BODY ================= */
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #e3ecf7, #d1e0f5); /* ลดความสว่างจาก #f0f5fa/#d8e5f5 → น้ำเงินอ่อนเข้มขึ้นนิด ดูมีมิติ ไม่ขาวจ้า */
-    color: #1e3a5f; /* น้ำเงินเข้มขึ้นนิด ให้ตัวอักษรหลักเด่นชัดกว่าเดิม */
+    background: linear-gradient(135deg, #e3ecf7, #d1e0f5);
+    color: #1e3a5f;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -20,12 +20,12 @@ body {
 
 /* ================= CONTAINER ================= */
 .container {
-    background: #eef4fc; /* จาก #f8fbff → น้ำเงินขาวอ่อนเข้มขึ้น ลดความจ้า ให้มีมิติมากขึ้น */
+    background: #eef4fc;
     width: 100%;
     padding: 45px 35px;
     border-radius: 28px;
-    box-shadow: 0 15px 35px rgba(30, 58, 95, 0.18); /* shadow เข้มขึ้นนิด ให้ container โผล่ชัด */
-    border: 1px solid #a3c4d9; /* จาก #c0d4ed → น้ำเงินอ่อนเข้มขึ้น ให้ขอบชัดเจน ไม่จาง */
+    box-shadow: 0 15px 35px rgba(30, 58, 95, 0.18);
+    border: 1px solid #a3c4d9;
     margin: 0 auto;
 }
 
@@ -61,7 +61,7 @@ h1 {
     background: #eef4fc; /* จาก #f8fbff → เข้มขึ้นนิด ลดความขาวจ้า ให้ card ไม่หลอมกับพื้นหลัง */
     border-radius: 22px;
     padding: 20px;
-    border: 1px solid #a3c4d9; /* เข้มขึ้น ให้ขอบชัด */
+    border: 1px solid #a3c4d9;
     transition: all 0.35s ease;
     display: flex;
     flex-direction: column;
@@ -89,13 +89,13 @@ h1 {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #1e3a5f; /* เข้มขึ้น ให้ชื่อเด่นชัดมากขึ้น */
+    color: #1e3a5f;
 }
 
 /* รายละเอียด */
 .card p {
     font-size: 0.9rem;
-    color: #2c4a6e; /* เข้มขึ้นนิด ให้อ่านง่ายและชัดเจน */
+    color: #2c4a6e;
     margin-bottom: 15px;
     line-height: 1.5;
 }
@@ -104,7 +104,7 @@ h1 {
 .price {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #3b82f6; /* สดใสขึ้นนิด ให้ราคาเด่นแต่ยังกลมกลืน */
+    color: #3b82f6;
     margin-bottom: 15px;
 }
 
@@ -122,7 +122,7 @@ h1 {
     justify-content: center;
     width: 42px;
     height: 42px;
-    background: #3b82f6; /* จาก #4a90e2 → สดใสขึ้นนิด ให้ปุ่มเด่นชัด */
+    background: #3b82f6;
     color: #ffffff;
     border-radius: 50%;
     text-decoration: none;
@@ -130,7 +130,7 @@ h1 {
 }
 
 .cart-btn:hover {
-    background: #1e40af; /* เข้มขึ้นเมื่อ hover ให้เห็นชัด */
+    background: #1e40af;
     transform: scale(1.08);
 }
 
@@ -139,8 +139,8 @@ h1 {
     position: absolute;
     top: -6px;
     right: -6px;
-    background: #1e3a5f; /* เข้มขึ้น ให้ badge เด่นมาก */
-    color: #eef4fc; /* ขาวน้ำเงินอ่อน ตัดกันดีขึ้น */
+    background: #1e3a5f;
+    color: #eef4fc;
     font-size: 0.7rem;
     font-weight: 600;
     padding: 3px 6px;
@@ -188,8 +188,8 @@ h1 {
 .back-btn {
     display: inline-block;
     padding: 10px 24px;
-    background: #d1e0f5; /* เข้มขึ้นนิด ให้ตัดกับพื้นหลังดีขึ้น */
-    color: #1e3a5f; /* เข้มขึ้น ให้ข้อความเด่น */
+    background: #d1e0f5;
+    color: #1e3a5f;
     font-weight: 600;
     text-decoration: none;
     border-radius: 12px;
@@ -197,5 +197,5 @@ h1 {
 }
 
 .back-btn:hover {
-    background: #b8cfee; /* เข้มขึ้นนิดเมื่อ hover */
+    background: #b8cfee;
 }

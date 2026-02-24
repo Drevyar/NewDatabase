@@ -7,7 +7,7 @@
 }
 
 .cart-wrapper {
-    background: #eef4fc; /* เข้ากับธีมน้ำเงินอ่อน */
+    background: #eef4fc; 
     border-radius: 20px;
     padding: 25px;
     box-shadow: 0 10px 25px rgba(30, 58, 95, 0.12);
@@ -76,7 +76,7 @@
 }
 
 .remove-btn {
-    color: #d32f2f; /* แดงอ่อนสำหรับลบ */
+    color: #d32f2f; 
     font-size: 1.3rem;
     transition: 0.3s;
 }

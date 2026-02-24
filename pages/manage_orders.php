@@ -18,7 +18,7 @@ require '../php/config.php';
 <?php include('navbar.php'); ?>
 
 <?php
-// เปิด error reporting ชั่วคราว (ลบออกตอน production)
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 

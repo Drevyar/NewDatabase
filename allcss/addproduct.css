@@ -8,7 +8,7 @@ label {
     display: block;
     font-weight: 500;
     margin-bottom: 8px;
-    color: #2c4a6e; /* ยังคงน้ำเงินเข้มเข้มข้น เด่นชัด */
+    color: #2c4a6e; 
     font-size: 1rem;
     letter-spacing: 0.5px;
 }
@@ -18,17 +18,17 @@ label {
     width: 100%;
     padding: 14px 16px;
     border-radius: 14px;
-    border: 1px solid #8cb0d3; /* น้ำเงินอ่อนเข้มขึ้นนิด ให้ขอบชัดขึ้น */
+    border: 1px solid #8cb0d3;
     font-size: 1rem;
-    background: #e8f0fa; /* ลดความสว่างจาก #f0f7fc → ดูนุ่ม ไม่ขาวจ้า แต่ยังสบายตา */
-    color: #1e3a5f; /* น้ำเงินเข้มสำหรับข้อความ ยังคงชัดเจน */
+    background: #e8f0fa; 
+    color: #1e3a5f; 
     transition: all .25s ease;
 }
 
 .form-control:focus {
-    border-color: #3b82f6; /* น้ำเงินกลางสดใสขึ้นนิด ให้เด่นตอน focus */
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.18); /* glow น้ำเงินอ่อนเข้มขึ้น */
-    background: #f8fbff; /* พื้นหลังตอน focus สว่างขึ้นเล็กน้อยแต่ไม่ขาวจ้า */
+    border-color: #3b82f6; 
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.18); 
+    background: #f8fbff;
     outline: none;
 }
 
@@ -41,7 +41,7 @@ textarea.form-control {
 input[type="file"] {
     width: 100%;
     padding: 12px;
-    background: #e8f0fa; /* เหมือน input หลัก ลดความขาว */
+    background: #e8f0fa;
     color: #1e3a5f;
     border: 1px solid #8cb0d3;
     border-radius: 14px;
@@ -62,7 +62,7 @@ input[type="file"]:hover {
 
 /* ===== Primary Button ===== */
 .btn-primary {
-    background: linear-gradient(135deg, #3b82f6, #1e40af); /* gradient น้ำเงินสด → เข้มขึ้น ให้เด่นแต่ไม่ฉูดฉาด */
+    background: linear-gradient(135deg, #3b82f6, #1e40af); 
     border: none;
     color: #ffffff;
     padding: 14px 40px;
@@ -76,5 +76,5 @@ input[type="file"]:hover {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(59, 130, 246, 0.40); /* shadow เข้มขึ้น ให้ปุ่มเด่นชัด */
+    box-shadow: 0 12px 24px rgba(59, 130, 246, 0.40); 
 }
