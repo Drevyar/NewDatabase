@@ -13,11 +13,15 @@ $types = "";
 
 /* ================= SEARCH ================= */
 if (!empty($search)) {
-    $sql .= " WHERE productname LIKE ? OR detail LIKE ?";
+    $sql .= " WHERE productname LIKE ? 
+              OR detail LIKE ? 
+              OR price LIKE ?";
+
     $like = "%".$search."%";
     $params[] = $like;
     $params[] = $like;
-    $types .= "ss";
+    $params[] = $like;
+    $types .= "sss";
 }
 
 /* ================= SORT ================= */
